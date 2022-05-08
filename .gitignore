@@ -1,0 +1,4 @@
+# 忽略a.css文件
+a.css
+#忽略text 目录下的所有文件
+text/
