@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+        }
+        #angel {
+            
+            position: absolute;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <img src="/images/shouji1.png" alt="" id="angel">
+    <div>
+
+    </div>
+    <script>
+        var div = document.querySelector('div');
+        // console.log(div.offsetLeft);
+        // console.log(div.offsetHeight);
+        document.addEventListener('mousemove',function(e) {
+            var angel = document.querySelector('#angel');
+            console.log(e.pageX);
+            console.log(e.pageY);
+            var y =  (angel.height / 2);
+            var x =  (angel.width / 2) ;
+            angel.style.top =e.pageY -  y + 'px';
+            angel.style.left =e.pageX - x + 'px';
+        })
+    </script>
+</body>
+</html>
